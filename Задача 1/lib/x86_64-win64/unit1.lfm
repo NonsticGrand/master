@@ -1,0 +1,121 @@
+object Pz59: TPz59
+  Left = 844
+  Height = 285
+  Top = 125
+  Width = 473
+  Caption = 'Pz59'
+  ClientHeight = 265
+  ClientWidth = 473
+  Menu = MainMenu1
+  LCLVersion = '2.0.6.0'
+  object Run: TButton
+    AnchorSideLeft.Control = Rezults
+    AnchorSideTop.Control = Coordinate_X
+    AnchorSideBottom.Control = Coordinate_Y
+    AnchorSideBottom.Side = asrBottom
+    Left = 44
+    Height = 95
+    Top = 45
+    Width = 190
+    Anchors = [akTop, akLeft, akBottom]
+    Caption = 'Run'
+    OnClick = RunClick
+    TabOrder = 0
+  end
+  object Coor_X: TEdit
+    AnchorSideLeft.Control = Rezults
+    AnchorSideTop.Control = Coordinate_X
+    AnchorSideTop.Side = asrCenter
+    Left = 344
+    Height = 23
+    Top = 41
+    Width = 80
+    BorderSpacing.Left = 300
+    TabOrder = 1
+    Text = '1'
+  end
+  object Coor_Y: TEdit
+    AnchorSideLeft.Control = Rezults
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 344
+    Height = 23
+    Top = 121
+    Width = 80
+    BorderSpacing.Left = 300
+    TabOrder = 2
+    Text = '1'
+  end
+  object Coordinate_X: TLabel
+    AnchorSideLeft.Control = Rezults
+    AnchorSideBottom.Control = Coordinate_Y
+    AnchorSideBottom.Side = asrBottom
+    Left = 259
+    Height = 15
+    Top = 45
+    Width = 71
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 215
+    BorderSpacing.Bottom = 80
+    Caption = 'Coordinate_X'
+    ParentColor = False
+  end
+  object Coordinate_Y: TLabel
+    AnchorSideLeft.Control = Rezults
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 259
+    Height = 15
+    Top = 125
+    Width = 71
+    BorderSpacing.Left = 215
+    Caption = 'Coordinate_Y'
+    ParentColor = False
+  end
+  object Rezults: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Coordinate_Y
+    Left = 44
+    Height = 76
+    Top = 175
+    Width = 384
+    BorderSpacing.Top = 50
+    Lines.Strings = (
+      'Rezults'
+    )
+    TabOrder = 3
+  end
+  object MainMenu1: TMainMenu
+    left = 8
+    top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'Открыть'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Сохранить'
+      OnClick = MenuItem2Click
+    end
+    object FSaveAs: TMenuItem
+      Caption = 'Сохранить как'
+      OnClick = FSaveAsClick
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem6: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem6Click
+    end
+  end
+  object fOpenDialog: TOpenDialog
+    left = 37
+    top = 8
+  end
+  object fSaveDialog: TSaveDialog
+    left = 66
+    top = 8
+  end
+end
