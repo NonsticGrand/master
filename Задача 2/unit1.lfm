@@ -1,0 +1,120 @@
+object Pz1: TPz1
+  Left = 574
+  Height = 293
+  Top = 164
+  Width = 493
+  Caption = 'Pz1'
+  ClientHeight = 273
+  ClientWidth = 493
+  Menu = Men
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Run: TButton
+    AnchorSideLeft.Control = Rezults
+    AnchorSideRight.Control = Edit1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Rezults
+    AnchorSideBottom.Side = asrBottom
+    Left = 46
+    Height = 29
+    Top = 26
+    Width = 101
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Right = 300
+    BorderSpacing.Bottom = 135
+    Caption = 'Run'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Number
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Rezults
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Rezults
+    AnchorSideBottom.Side = asrBottom
+    Left = 373
+    Height = 23
+    Top = 29
+    Width = 74
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Left = 60
+    BorderSpacing.Top = 53
+    BorderSpacing.Bottom = 138
+    TabOrder = 1
+    Text = '1'
+  end
+  object Number: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Rezults
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Rezults
+    AnchorSideBottom.Side = asrBottom
+    Left = 313
+    Height = 15
+    Top = 37
+    Width = 44
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Top = 55
+    BorderSpacing.Right = 90
+    BorderSpacing.Bottom = 138
+    Caption = 'Number'
+    ParentColor = False
+  end
+  object Rezults: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 46
+    Height = 107
+    Top = 83
+    Width = 401
+    BorderSpacing.Left = 34
+    BorderSpacing.Top = 70
+    Lines.Strings = (
+      'Rezults'
+    )
+    OnChange = RezultsChange
+    TabOrder = 2
+  end
+  object Men: TMainMenu
+    left = 465
+    top = 240
+    object MenuItem1: TMenuItem
+      Caption = 'Открыть'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Сохранить'
+      ShortCut = 16467
+      OnClick = MenuItem2Click
+    end
+    object FSaveAs: TMenuItem
+      Caption = 'Сохранить как'
+      OnClick = FSaveAsClick
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem4Click
+    end
+  end
+  object fOpenDialog: TOpenDialog
+    FileName = 'E:\__\Скриншоты проверок\Массивы\Файлы\498б'
+    Filter = 'txt|*.txt|Остальные|*.dat'
+    InitialDir = 'E:\__\Скриншоты проверок\Массивы\Файлы\'
+    left = 8
+    top = 240
+  end
+  object fSaveDialog: TSaveDialog
+    Filter = 'txt|*.txt'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    left = 40
+    top = 239
+  end
+end
