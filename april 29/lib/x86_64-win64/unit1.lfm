@@ -1,0 +1,133 @@
+object Pz1: TPz1
+  Left = 1027
+  Height = 293
+  Top = 183
+  Width = 493
+  Caption = 'Pz1'
+  ClientHeight = 273
+  ClientWidth = 493
+  Menu = Men
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Run: TButton
+    AnchorSideLeft.Control = TSG
+    AnchorSideRight.Control = TSG
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TSG
+    AnchorSideBottom.Side = asrBottom
+    Left = 114
+    Height = 23
+    Top = 29
+    Width = 79
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Right = 185
+    BorderSpacing.Bottom = 160
+    Caption = 'Run'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Number
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = TSG
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TSG
+    AnchorSideBottom.Side = asrBottom
+    Left = 304
+    Height = 23
+    Top = 29
+    Width = 74
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Left = 60
+    BorderSpacing.Top = 53
+    BorderSpacing.Bottom = 160
+    TabOrder = 1
+    Text = '1'
+  end
+  object Number: TLabel
+    AnchorSideLeft.Control = Edit1
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = TSG
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = TSG
+    AnchorSideBottom.Side = asrBottom
+    Left = 244
+    Height = 15
+    Top = 32
+    Width = 43
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Top = 55
+    BorderSpacing.Right = 91
+    BorderSpacing.Bottom = 165
+    Caption = 'Данные'
+    ParentColor = False
+  end
+  object TSG: TStringGrid
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = Owner
+    AnchorSideTop.Side = asrCenter
+    Left = 114
+    Height = 152
+    Top = 60
+    Width = 264
+    TabOrder = 2
+    ColWidths = (
+      29
+      108
+      110
+      64
+      64
+    )
+    Cells = (
+      3
+      0
+      0
+      '№'
+      1
+      0
+      'Входные данные'
+      2
+      0
+      'Ответ'
+    )
+  end
+  object Men: TMainMenu
+    left = 465
+    top = 240
+    object MenuItem1: TMenuItem
+      Caption = 'Открыть'
+      OnClick = MenuItem1Click
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Сохранить'
+      ShortCut = 16467
+      OnClick = MenuItem2Click
+    end
+    object FSaveAs: TMenuItem
+      Caption = 'Сохранить как'
+      OnClick = FSaveAsClick
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem5Click
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Выход'
+      OnClick = MenuItem4Click
+    end
+  end
+  object fOpenDialog: TOpenDialog
+    FileName = 'E:\__\Скриншоты проверок\Массивы\Файлы\498б'
+    Filter = 'txt|*.txt|Остальные|*.dat'
+    InitialDir = 'E:\__\Скриншоты проверок\Массивы\Файлы\'
+    left = 8
+    top = 240
+  end
+  object fSaveDialog: TSaveDialog
+    Filter = 'txt|*.txt'
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    left = 40
+    top = 239
+  end
+end
