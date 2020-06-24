@@ -31,7 +31,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="5">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -49,6 +49,16 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit2"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="..\master-master\Задача 1\unit3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit3"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\Задача 1\unit4.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit4"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -59,6 +69,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="..\master-master\Задача 1;..\Задача 1"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

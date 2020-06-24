@@ -1,7 +1,7 @@
 object Pz1: TPz1
-  Left = 1027
+  Left = 621
   Height = 293
-  Top = 183
+  Top = 162
   Width = 493
   Caption = 'Pz1'
   ClientHeight = 273
@@ -11,16 +11,16 @@ object Pz1: TPz1
   LCLVersion = '2.0.6.0'
   object Run: TButton
     AnchorSideLeft.Control = TSG
+    AnchorSideRight.Control = TSG
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = TSG
-    AnchorSideBottom.Side = asrBottom
-    Left = 114
+    Left = 110
     Height = 23
-    Top = 29
-    Width = 86
+    Top = 20
+    Width = 103
     Anchors = [akLeft, akRight, akBottom]
-    BorderSpacing.Right = 150
-    BorderSpacing.Bottom = 160
+    BorderSpacing.Right = 170
+    BorderSpacing.Bottom = 26
     Caption = 'Run'
     OnClick = Button1Click
     TabOrder = 0
@@ -31,15 +31,14 @@ object Pz1: TPz1
     AnchorSideRight.Control = TSG
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = TSG
-    AnchorSideBottom.Side = asrBottom
-    Left = 304
+    Left = 309
     Height = 23
-    Top = 29
+    Top = 20
     Width = 74
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 60
     BorderSpacing.Top = 53
-    BorderSpacing.Bottom = 160
+    BorderSpacing.Bottom = 26
     TabOrder = 1
     Text = '1'
   end
@@ -49,27 +48,33 @@ object Pz1: TPz1
     AnchorSideRight.Control = TSG
     AnchorSideRight.Side = asrBottom
     AnchorSideBottom.Control = TSG
-    AnchorSideBottom.Side = asrBottom
-    Left = 244
+    Left = 249
     Height = 15
-    Top = 32
+    Top = 24
     Width = 43
     Anchors = [akRight, akBottom]
     BorderSpacing.Top = 55
     BorderSpacing.Right = 91
-    BorderSpacing.Bottom = 165
+    BorderSpacing.Bottom = 30
     Caption = 'Данные'
     ParentColor = False
   end
   object TSG: TStringGrid
     AnchorSideLeft.Control = Owner
-    AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Owner
     AnchorSideTop.Side = asrCenter
-    Left = 114
-    Height = 152
-    Top = 60
-    Width = 264
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 110
+    Height = 134
+    Top = 69
+    Width = 273
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Left = 110
+    BorderSpacing.Right = 110
+    BorderSpacing.Bottom = 70
     TabOrder = 2
     ColWidths = (
       29
@@ -92,20 +97,22 @@ object Pz1: TPz1
     )
   end
   object Men: TMainMenu
-    left = 465
+    left = 464
     top = 240
     object MenuItem1: TMenuItem
-      Caption = 'Открыть'
-      OnClick = MenuItem1Click
-    end
-    object MenuItem2: TMenuItem
-      Caption = 'Сохранить'
-      ShortCut = 16467
-      OnClick = MenuItem2Click
-    end
-    object FSaveAs: TMenuItem
-      Caption = 'Сохранить как'
-      OnClick = FSaveAsClick
+      Caption = 'Файл'
+      object MenuItem6: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem6Click
+      end
+      object FSaveAs1: TMenuItem
+        Caption = 'Сохранить как'
+        OnClick = FSaveAs1Click
+      end
+      object MenuItem2: TMenuItem
+        Caption = 'Открыть'
+        OnClick = MenuItem2Click
+      end
     end
     object MenuItem5: TMenuItem
       Caption = 'Справка'
