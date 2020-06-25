@@ -1,0 +1,221 @@
+:root{
+/* Здесь описываются CSS переменные 
+   Имя переменной начинается с --
+   Значение переменной записывается после двоеточия.
+  
+  Все эти перменные используются в коде ниже.
+  
+  Рекомендуется изменять эти переменные, 
+  а не указывать отдельные цвета где-то в середине этой файла.
+ 
+   */
+  
+/*   основной цвет !!! */
+  --primary: #231f20;
+
+/* основной цвет текста !!! */
+  --text: #231f20;
+  
+  --text1: #66A3D2;
+
+/* дополнительный цвет !!! */
+  --secondary: #ffffff;
+  
+/* дополнительный цвет. светлый вариант !!! */
+  --secondary-light: #3F92D2;
+  
+  /*   Акцидентный цвет и цвет шрифта на его фоне */
+  --accent: #231f20 ;
+  --accent-text: #6C90CD;
+  
+  --accent2:#231f20 ;  /* используется только для подсветки кнопки акцидентного цвета при наведении */
+  --accent2-text: #6C90CD;
+  
+/* основной размер шрифта !!! */
+  --size: 17px;
+  
+/*   остальные размеры */
+  --size2: 1.4em;
+  --size3: 1.8em;
+  --size4: 2.3em;
+}
+
+
+/* Для всей страницы !!! */
+body{
+  font-family: Arial, Times;    /* Основной и запасной шрифт */
+  /* Здесь задётся размер шрифта с помошью переменной. Переменная оборачивается в var*/
+  font-weight: 700;
+  font-size: var(--size);    
+/*   цвет шрифта всей страницы */
+  color: var(--text);
+  /* цвет фона всей страницы */
+  background: var(--secondary-light);     /* !!! */
+}
+
+
+/* Настройка внешнего вида списков, ссылок и отступа для параграфа */
+ul li{
+  list-style-type: none;}
+
+
+
+.row ul li{
+  list-style-type: square;}
+
+
+a{
+  text-decoration: none;}
+
+p{
+  margin: 15px 10px;}
+
+
+/* заголовоки первого-третьего уровня */
+h1{
+  font-size: var(--size4)
+}
+
+h2{
+  font-size: var(--size3)
+}
+
+h3{
+  font-size: var(--size2)
+}
+
+
+
+/* Шапка */
+header{                       /* !!! */
+  background: var(--secondary-light);
+  color: var(--text);
+}
+
+/* Заголовок и подзаголовок вместе */
+.Title{
+    /* Для заколовка можно задать особенный шрифт */
+  font-family: Georgia;      
+}
+
+
+/* Правая часть заголовка */
+.Title-right{
+  background: var(--secondary-light);
+  color: var(--text);
+  
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+/* Ссылка в заголовке (справа) */
+.Title-right a{
+  background: var(--secondary-light);
+  color: var(--primary);
+}
+
+/* Посещеная ссылка в заголовке (справа) */
+.Title-right a:visited{
+  background: var(--secondary-light);
+  color: #8F04A8;
+}
+
+
+
+/* Навигация (строка меню) */
+.main-nav{
+  background: var(--primary);  /* !!! */
+  font-size: var(--size2);             /* --- */
+  margin-bottom: 50px;  
+}
+
+
+/* Текст элемента меню */
+.main-nav li a{
+  text-decoration: none;
+  color: white;                 /* ---- */
+  
+  height: 100%;
+  padding: 28px;
+}
+
+
+/* Текст элемента меню при наведении*/
+.main-nav li a:hover{
+  background: var(--accent);        /* --- */
+  color: var(--accent-text);        /* --- */
+}
+
+
+
+
+
+/* Основной раздел */
+.main-section{
+  margin-left: 0px;
+  background: var(--secondary-light);            /* !!! */
+}
+
+
+/* Блоки основного раздела */
+.row{
+  background: var(--secondary);       /* !!! */
+  font-weight: 500;
+  color: var(--text);                        /* !!! */
+  
+  padding: 40px;  
+}
+
+
+/* .cite-author{
+  text-align: right;
+}
+ */
+
+
+/* Для исходного кода */
+code{
+  font-family: courier;             /* !!! */
+  display: block;
+  white-space: pre-wrap   
+}
+
+
+
+
+
+/* Заметная кнопка */
+.click-me{
+  background:#0776A0;      /* --- */
+  color:White;
+  border-radius: 120px;
+  padding: 10px 20px;
+  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;             /* --- */
+ 
+}
+
+/* Заметная кнопка. При наведении */
+.click-me:hover{
+  background: var(--accent2);      /* --- */
+  color:white;
+}
+
+
+
+
+
+/* Нижняя часть сайта, "подвал" */
+footer{
+  color: white;                     /* !!! */
+  background: var(--accent2)
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
