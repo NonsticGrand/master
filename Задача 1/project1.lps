@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="5">
+    <Units Count="8">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="22"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -21,9 +21,9 @@
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="48"/>
-        <CursorPos X="98" Y="50"/>
-        <UsageCount Value="23"/>
+        <TopLine Value="39"/>
+        <CursorPos X="18" Y="58"/>
+        <UsageCount Value="24"/>
       </Unit1>
       <Unit2>
         <Filename Value="unit1.lfm"/>
@@ -45,10 +45,34 @@
         <Filename Value="unit4.pas"/>
         <UnitName Value="Unit4"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="43"/>
-        <CursorPos X="81" Y="60"/>
+        <CursorPos X="13" Y="16"/>
         <UsageCount Value="10"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="..\april 29\unit1.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\april 29\unit1.pas"/>
+        <ComponentName Value="Pz1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="54" Y="69"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\april 29\unit2.pas"/>
+        <UnitName Value="Unit2"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <CursorPos X="18" Y="21"/>
+        <UsageCount Value="10"/>
+      </Unit7>
     </Units>
     <General>
       <ActiveWindowIndexAtStart Value="-1"/>

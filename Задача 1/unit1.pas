@@ -50,14 +50,27 @@ implementation                                            //Ниже наход�
 { TPz59 }
 
 procedure TPz59.RunClick(Sender: TObject);
+var  x,y:real;
+     s:string;
 begin
- calculation;
+x:=StrToFloat(Pz59.Coor_X.text);
+y:=StrToFloat(Pz59.Coor_Y.Text);
+calculation(x,y,s);
+Rezults.Append(s);
 end;
 
 
 procedure TPz59.MenuItem3Click(Sender: TObject);
+var  s,s1:string;
 begin
-open(fFilePath);
+  if not Pz59.fOpenDialog.Execute then exit;
+  if Pz59.fOpenDialog.Execute then
+  begin
+  fFilePath:=fOpenDialog.FileName;
+  open(fFilePath,s,s1);
+  Coor_X.Text:=s;
+  Coor_Y.Text:=s1;
+  end;
 end;
 
 procedure TPz59.MenuItem4Click(Sender: TObject);
@@ -67,7 +80,9 @@ end;
 
 procedure TPz59.MenuItem5Click(Sender: TObject);
 begin
-  save(fFilePath);
+  if not Pz59.fOpenDialog.Execute then exit;
+  if fFilePath='' then Pz59.MenuItem7.Click
+  else Pz59.Rezults.Lines.SaveToFile(fFilePath);
 end;
 
 procedure TPz59.MenuItem6Click(Sender: TObject);
@@ -77,7 +92,16 @@ end;
 
 procedure TPz59.MenuItem7Click(Sender: TObject);
 begin
-save_as(fFilePath);
+  if not Pz59.fOpenDialog.Execute then exit;
+    if fFilePath='' then fsavedialog.FileName:='Новый документ.txt'
+  else fsavedialog.FileName:=fFilePath;
+  if fSaveDialog.Execute then
+  begin
+  if extractfileext(fSaveDialog.FileName)='' then
+  fFilePath:=fSaveDialog.FileName+'.txt'
+  else fFilePath:=fSaveDialog.FileName;
+  Rezults.Lines.SaveToFile(fFilePath);
+  end;
 end;
 
 end.

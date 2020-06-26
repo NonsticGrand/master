@@ -48,6 +48,7 @@ object Pz59: TPz59
   end
   object Coordinate_X: TLabel
     AnchorSideLeft.Control = Rezults
+    AnchorSideTop.Control = Owner
     AnchorSideBottom.Control = Coordinate_Y
     AnchorSideBottom.Side = asrBottom
     Left = 259
@@ -56,6 +57,7 @@ object Pz59: TPz59
     Width = 71
     Anchors = [akLeft, akBottom]
     BorderSpacing.Left = 215
+    BorderSpacing.Top = 4
     BorderSpacing.Bottom = 80
     Caption = 'Coordinate_X'
     ParentColor = False

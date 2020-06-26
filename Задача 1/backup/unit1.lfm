@@ -104,12 +104,6 @@ object Pz59: TPz59
         OnClick = MenuItem7Click
       end
     end
-    object MenuItem2: TMenuItem
-      Caption = 'Сохранить'
-    end
-    object FSaveAs: TMenuItem
-      Caption = 'Сохранить как'
-    end
     object MenuItem4: TMenuItem
       Caption = 'Справка'
       OnClick = MenuItem4Click
