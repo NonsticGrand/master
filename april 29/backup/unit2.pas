@@ -18,13 +18,11 @@ calcul2= array[1..128] of calcul;
 
 Procedure Calculate(var c:calcul2; n:integer);
 procedure save_otv(var c:calcul2; var filename: string; var n:integer);
-Procedure save(var ffilename:string);
-Procedure open();
-Procedure save_as_s(var ffilename:string);
+Procedure open(var fFilePath: string);
 
 implementation
 uses
-  Classes, SysUtils, Unit1;
+  Classes, SysUtils;
 
 Procedure Calculate(var c:calcul2; n:integer);
 begin
@@ -49,47 +47,21 @@ procedure save_otv(var c:calcul2; var filename: string; var n:integer);
  Write(f1,s);
  writeln(f1);
  end;
+ writeln(f1);
  closefile(f1);
  end;
 
 
-Procedure save(var ffilename:string);
-begin
-  if not Pz1.fOpenDialog.Execute then exit;
-  if Pz1.fOpenDialog.Execute then
- fFilename:=Pz1.fOpenDialog.FileName;
-end;
 
-
-Procedure open();
-  var s:string;
+Procedure open(var fFilePath,s: string);
+  var
     f1:text;
   begin
-   if not Pz1.fOpenDialog.Execute then exit;
-   if Pz1.fOpenDialog.Execute then
-       begin
-           fFilePath:=Pz1.fOpenDialog.FileName;
            AssignFile(f1,fFilePath);
            reset(f1);
            readln(f1,s);
-           Pz1.Edit1.Text:=s;
            closeFile(f1);
     end;
-  end;
 
 
-Procedure save_as_s(var ffilename:string);
-  var s:string;
-   begin
-     if not Pz1.fSaveDialog.Execute then exit;
-     ffilename:=Pz1.fOpenDialog.FileName;
-     if ffilename='' then Pz1.fsavedialog.FileName:='Новый документ.txt'
-     else Pz1.fsavedialog.FileName:=fFilePath;
-        if Pz1.fSaveDialog.Execute then
-          begin
-            if extractfileext(Pz1.fSaveDialog.FileName)='' then
-               ffilename:=Pz1.fSaveDialog.FileName+'.txt'
-           else ffilename:=Pz1.fSaveDialog.FileName;
-            end;
-          end;
 end.

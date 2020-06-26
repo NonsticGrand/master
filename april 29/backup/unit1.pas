@@ -29,7 +29,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FSaveAs1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
-    procedure MenuItem3Click(Sender: TObject);
     procedure MenuItem4Click(Sender: TObject);
     procedure MenuItem5Click(Sender: TObject);
     procedure MenuItem6Click(Sender: TObject);             //Конец объявления методов
@@ -58,14 +57,30 @@ end;
 
 procedure TPz1.FSaveAs1Click(Sender: TObject);
  begin
-   save_as_s(fFilePath);
+   if not Pz1.fSaveDialog.Execute then exit;
+     fFilePath:=fOpenDialog.FileName;
+     if fFilePath='' then fsavedialog.FileName:='Новый документ.txt'
+     else fsavedialog.FileName:=fFilePath;
+        if fSaveDialog.Execute then
+          begin
+            if extractfileext(fSaveDialog.FileName)='' then
+               fFilePath:=fSaveDialog.FileName+'.txt'
+           else fFilePath:=fSaveDialog.FileName;
+            end;
   save_otv(c,fFilePath,n);
   end;
 
 
 procedure TPz1.MenuItem2Click(Sender: TObject);
+var s:string;
 begin
-  open;
+    if not fOpenDialog.Execute then exit;
+   if fOpenDialog.Execute then
+       begin
+           fFilePath:=fOpenDialog.FileName;
+           open(fFilePath,s);
+       end;
+       Pz1.Edit1.Text:=s;
 end;
 
 
@@ -83,8 +98,10 @@ end;
 
 procedure TPz1.MenuItem6Click(Sender: TObject);
 begin
- save(fFilePath);
- save_otv(c,fFilePath,n);
+   if not fOpenDialog.Execute then exit;
+   if fOpenDialog.Execute then
+   fFilePath:=fOpenDialog.FileName;
+   save_otv(c,fFilePath,n);
  end;
 
 
